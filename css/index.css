@@ -1,0 +1,114 @@
+body{
+	background: url('../img/12.jpg') no-repeat;
+	background-size: cover;
+	background-position: center 0;
+	/* 设置多浏览器支持 */
+	-webkit-background-size: cover; /*设置背景图片的尺寸*/
+	-o-background-size: cover;
+	-moz-background-size: cover;
+}
+
+#glo{
+	width: 78%;
+	height: 100%; 
+	background: #ffffff; 
+	opacity: 0.75;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 10px #909090;
+	-webkit-box-shadow: 2px 2px 10px #909090;
+	box-shadow:2px 2px 10px #909090;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+Button{
+    background-color: skyblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+	text-shadow: 2px 2px 2px #909090;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+Button:hover{
+	-moz-box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
+    0 17px 50px 0 rgba(0,0,0,.19);
+	-webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
+    0 17px 50px 0 rgba(0,0,0,.19);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
+    0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+input {
+    appearance: none;
+    text-align: center;
+    height: 36px;
+    width: 70%;
+    border-radius: 5px;
+    border: 0px solid #fff;
+    padding: 0 8px;
+    outline: 0;
+    letter-spacing: 1px;
+    color: #000000;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+input {
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0,0.1);
+}
+
+.other_sites{
+	margin-left: 5px;
+}
+
+.reiz{
+	margin-left: 5px;
+}
+
+.search_box{
+	margin-left: 5px;
+}
+
+#title_1{
+	color: white;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
+#title_2{
+	color: aquamarine;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
+#title_3{
+	color: #aaff7f;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
+footer{
+	color: #55aaff;
+	text-shadow: 2px 2px 2px #aaff7f;
+}
+
+#footer_div{
+	width: 70%;
+	height: 70%; 
+	background: #ffffff; 
+	opacity: 0.75;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 10px #909090;
+	-webkit-box-shadow: 2px 2px 10px #909090;
+	box-shadow:2px 2px 10px #909090;
+	margin-left: auto;
+	margin-right: auto;
+}
