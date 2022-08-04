@@ -19,6 +19,12 @@ body{
 	box-shadow:2px 2px 10px #909090;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid #d8d8d8;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
 Button{
@@ -35,6 +41,10 @@ Button{
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-shadow: 0 1px 2px rgba(0,0,0,.1);
+	border-radius: 5px;
 }
 Button:hover{
 	-moz-box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
@@ -48,7 +58,7 @@ Button:hover{
 input {
     appearance: none;
     text-align: center;
-    height: 36px;
+    height: 40px;
     width: 70%;
     border-radius: 5px;
     border: 0px solid #fff;
@@ -64,16 +74,7 @@ input {
 input {
     box-shadow: 0 0 5px 4px rgba(0, 0, 0,0.1);
 }
-
-.other_sites{
-	margin-left: 5px;
-}
-
 .reiz{
-	margin-left: 5px;
-}
-
-.search_box{
 	margin-left: 5px;
 }
 
@@ -95,14 +96,28 @@ input {
 	background-color: cornflowerblue;
 }
 
+#title_manga{
+	color: #55ffff;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
+#title_search_engine{
+	color: #00ff7f;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
+#title_bangumi{
+	color: #00ff7f;
+	text-shadow: 2px 2px 2px #909090;
+	background-color: cornflowerblue;
+}
+
 footer{
 	color: #55aaff;
 	text-shadow: 2px 2px 2px #aaff7f;
-}
-
-#footer_div{
-	width: 70%;
-	height: 70%; 
+	width: 75%;
 	background: #ffffff; 
 	opacity: 0.75;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
@@ -111,4 +126,52 @@ footer{
 	box-shadow:2px 2px 10px #909090;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 2px;
+	
+}
+
+#tenki_show{
+	border: none;
+	width: 180px;
+	height: 55px;
+	margin-left: 5px;
+}
+
+a:link {
+	color: blue; text-decoration:none;
+}
+a:active:{
+	color: red; text-decoration: none;
+}
+a:visited {color:royalblue;text-decoration:none;}
+a:hover {color: red; text-decoration:underline;} 
+
+#time_p{
+	background-color: black;
+	width: 120px;
+	margin-left: 200px;
+	margin-top: -55px;
+	color: white;
+	text-shadow: antiquewhite;
+	border: 3px solid #55aaff;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 10px #909090;
+	-webkit-box-shadow: 2px 2px 10px #909090;
+	box-shadow:2px 2px 10px #909090;
+}
+
+nav{
+	height: 22px;
+	background-color: #b2cfb887;
+	margin-top: -12px;
+	text-align: left;
+	opacity: 80%;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.search_box{
+	margin-left: 15px;
 }

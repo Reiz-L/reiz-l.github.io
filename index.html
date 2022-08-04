@@ -3,19 +3,42 @@
 	<head>
 		<script type="text/javascript" src="js/index.js?v=1.0"></script>
 		<script type="text/javascript" src="js/jquery.js?v=1.0"></script>
+		<script type="text/javascript" src="js/mouse_click_special.js?v=1.0"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/index.css?v=1.0"/>
 		<meta charset="utf-8" />
 		<title>Reiz的导航页</title>
+		<style>
+			@keyframes remove {
+			    100% {
+			        opacity: 0;
+			    }
+			}
+			.text {
+		        position: absolute;
+		        z-index: 9999999;
+		        font-weight: bold;
+		        user-select: none;
+		    }
+		</style>
 	</head>
-	<body>
+	<body onload="show()">
+		<nav>
+			<a href="" id="#hello">Reiz Navigation service for every kind people!</a>
+			<a href="javascript:alert('正在开发中...');">用户中心</a>
+		</nav>
 		<div id="glo">
-			<h1>欢迎来到Reiz的导航页</h1>
-			<p>这里有Reiz常用的几个网站，以及reiz分享的资源</p>
-			<a href="javascript:alert('因为我懒，之前写的全删了！');">为什么网页不设计的好看一点呢？</a>
-			<div class="search_box">
+			<div class="the_first">
+				<h1>欢迎来到Reiz的导航页</h1>
+				<iframe id="tenki_show" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code" title="tenki"></iframe>
+				<p id="time_p">现在是</p>
+				<p>这里有Reiz常用的几个网站，以及reiz分享的资源</p>
+				<a href="javascript:alert('因为我懒，之前写的全删了！');">为什么网页不设计的好看一点呢？</a>
+			</div>
+			
+			<div class="search_box" onkeydown="onsomekey()">
 				<input id="search_text"/>
-				<button type="button" onclick="search_by_google()">谷歌一下(免翻墙)</button>
+				<button id="search_button" type="button" onclick="search_by_google()">谷歌一下(免翻墙)</button>
 				<p>如果一次不成功请多试试</p>
 			</div>
 			<div class="reiz">
@@ -25,20 +48,41 @@
 				<a href="https://topaz-diagnostic-apatosaurus.glitch.me/%E5%9B%BE%E5%BA%8A/%E3%80%90%E5%AE%98%E6%96%B9%20MV%E3%80%91Never%20Gonna%20Give%20You%20Up%20-%20Rick%20Astley.flv?preview">你被骗了</a>
 				<a href="https://topaz-diagnostic-apatosaurus.glitch.me/%E5%9B%BE%E5%BA%8A/">图床</a>
 			</div>
-			<div class="other_sites">
-				<p id="title_2">其他网站</p>
+			
+			<div class="reiz">
+				<p id="title_search_engine">搜索引擎</p>
+				<a href="https://www.google.com">Google(需梯子)</a>
+				<a href="https://www.baidu.com">pǎi吐(某度)</a>
+				<a href="https://www.yandex.com">yandex</a>
+				<a href="https://bing.com">必应</a>
+				<a href="https://www.sogou.com">搜狗</a>
+				<a href="https://www.so.com">ⅢⅥ〇搜索</a>
+			</div>
+			
+			<div class="reiz">
+				<p id="title_manga">漫画网站</p>
 				<a href="https://dogemanga.com">漫画狗</a>
 				<a href="https://manhuacat.com">漫画猫</a>
+			</div>
+			
+			<div class="reiz">
+				<p id="title_bangumi">在线&下载 番剧</p>
 				<a href="https://www.bilibili.com">B站</a>
 				<a href="https://www.pixiv.net">Pixiv(P站)</a>
 				<a href="https://senfun.net">森之屋(看番)</a>
 				<a href="https://omofun.tv">omofun(看番)</a>
 				<a href="https://myself-bbs.com">myselfbbs 台湾看番网站</a>
+				<a href="https://acgsecrets.hk/bangumi/">新番表</a>
+				<a href="https://www.cycacg.com/">次元城</a>
+			</div>
+			
+			<div class="reiz">
+				<p id="title_2">其他网站</p>
 				<a href="https://gkdworld.xyz">资源统筹局(涩涩)</a>
 				<a href="https://vikacg.com">维咔ACG(需要梯子)</a>
 				<a href="http://tool.liumingye.cn/music/?page=searchPage">全网音乐免费下载网站</a>
 			</div>
-			<div class="jxz">
+			<div class="reiz">
 				<p id="title_3">访问慢？镜像站！</p>
 				<a href="index.html">本站</a>
 				<a href="http://www.infcre.tk">镜像1</a>
@@ -47,9 +91,8 @@
 		
 	</body>
 	<footer>
-		<div id="footer_div">
-			<p>网页更新于2022/8/3</p>
+		<div>
+			<p>网页更新于2022/8/3 11:03 AM    若网页存在问题，或侵犯了您的权益可联系Reiz进行处理 kylizi@outlook.com</p>
 		</div>
-		
 	</footer>
 </html>
