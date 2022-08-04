@@ -1,4 +1,4 @@
-﻿body{
+body{
 	background: url('https://topaz-diagnostic-apatosaurus.glitch.me/%E5%9B%BE%E5%BA%8A/12.jpg') no-repeat;
 	background-size: cover;
 	background-position: center 0;
@@ -132,9 +132,9 @@ footer{
 
 #tenki_show{
 	border: none;
-	width: 180px;
-	height: 55px;
-	margin-left: 5px;
+	margin-left: 30px;
+	width: 240px;
+	height: 80px;
 }
 
 a:link {
@@ -149,7 +149,7 @@ a:hover {color: red; text-decoration:underline;}
 #time_p{
 	background-color: black;
 	width: 120px;
-	margin-left: 200px;
+	margin-left: 260px;
 	margin-top: -55px;
 	color: white;
 	text-shadow: antiquewhite;
