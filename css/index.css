@@ -1,5 +1,5 @@
-body{
-	background: url('../img/12.jpg') no-repeat;
+﻿body{
+	background: url('https://i0.hdslb.com/bfs/new_dyn/eba82b9062d143c6d9df4ee26b806e02275212157.jpg') no-repeat;
 	background-size: cover;
 	background-position: center 0;
 	/* 设置多浏览器支持 */
@@ -173,5 +173,5 @@ nav{
 }
 
 .search_box{
-	margin-left: 15px;
+	margin-left: 14px;
 }
