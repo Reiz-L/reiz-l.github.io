@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON文件生成器</title>
+  <style>
+    /* Add some styling to make the purl look nicer */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    textarea{
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Add some styling for the download link */
+    .download-link {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JSON文件生成器</h1>
+
+    <form>
+      <label for="id">输入id:</label>
+      <input type="text" id="id" name="id">
+
+      <label for="url">输入url:</label>
+      <input type="text" id="url" name="url">
+
+      <label for="caption">输入描述:</label>
+      <input type="text" id="caption" name="caption">
+      
+      <button id="generate-json">生成 JSON</button>
+    </form>
+    <a>生成的内容:</a>
+    <textarea id="json-output" style="width: 400px;height: 200px;"></textarea>
+
+    <a href="#" class="download-link" id="download-link" download>Download JSON</a>
+  </div>
+  <script>
+      // Get references to the form fields
+  var nameField = document.getElementById("id");
+  var urlField = document.getElementById("url");
+  var captionField = document.getElementById("caption");
+  var generateButton = document.getElementById("generate-json");
+  var downloadLink = document.getElementById("download-link");
+  var jsonOutput = document.getElementById("json-output");
+
+  // Add an event listener to the Generate JSON button
+  generateButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    // Get the values from the form fields
+    var name = nameField.value;
+    var url = urlField.value;
+    var caption = captionField.value;
+
+    // Create a JSON object with the form data
+    var jsonData = {};
+    jsonData[name] = {
+        url: url,
+        caption: caption
+    };
+    // Convert the JSON object to a string
+    var jsonString = JSON.stringify(jsonData);
+
+    // Create a new Blob object with the JSON string
+    var jsonBlob = new Blob([jsonString], { type: "application/json" });
+    
+    // Create a URL for the blob object
+    var url = URL.createObjectURL(jsonBlob);
+    jsonOutput.value = jsonString;
+    // Update the download link's href and text
+    downloadLink.href = url;
+    downloadLink.innerHTML = "下载 JSON";
+
+    // Show the download link
+    downloadLink.style.display = "block";
+  });
+
+  </script>
+</body>
+</html>

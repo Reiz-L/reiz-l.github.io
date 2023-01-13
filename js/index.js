@@ -25,3 +25,16 @@ now = now + date.getSeconds()+"秒";
 document.getElementById("time_p").innerHTML = now; //div的html是now这个字符串
 setTimeout("show()",1000); //设置过1000毫秒就是1秒，调用show方法
 }
+
+var currentVersion = document.documentElement.getAttribute("data-version");
+// 使用 fetch API 请求 version.json 文件
+fetch("jsons/ver.json")
+.then(response => response.json())
+.then(data => {
+    // 获取最新版本号
+    var latestVersion = data.version;
+        // 如果当前版本小于最新版本, 刷新页面
+    if (currentVersion < latestVersion) {
+        location.reload();
+    }
+});
