@@ -47,9 +47,21 @@
 </head>
 <body>
     <div id="header">
+        <script>
+            function a() {
+                var password = prompt("请输入密码：");
+                if (password != null) {
+                    window.location = "http://takesita.ccccocccc.cc/admin/sqladmin.php?pswd=" + password;
+                }
+                else{
+                    alert("密码不能为空！");
+                }
+            }
+            
+        </script>
         <h1>ReizTakesita</h1>
         <ul>
-          <li><a href="http://takesita.ccccocccc.cc/admin/sqladmin.php">Admin</a></li>
+          <li><a href="javascript:a();">Admin</a></li>
         </ul>
     </div>
 
